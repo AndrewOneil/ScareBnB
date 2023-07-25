@@ -1,0 +1,44 @@
+<% layout('layouts/boilerplate') %>
+
+<div id="cluster-map"></div>
+
+<div class="container mt-5">
+  <h1>All Haunted Locations</h1>
+  <div>
+    <a href="/hauntedLocations/new">Add Haunted Location</a>
+  </div>
+  <!-- iterates over all locations stored in database and displays them in a bootstrap card  -->
+  <% for (let hauntedLocation of hauntedLocations) {%>
+  <div class="card mb-3">
+    <div class="row">
+      <div class="col-md-4">
+        <% if(hauntedLocation.images.length) {%>
+        <img src="<%= hauntedLocation.images[0].url %>" alt="" class="img-fluid">
+        <% } else {%>
+        <img src="https://res.cloudinary.com/dcjby4uou/image/upload/v1679587449/ScareBnB/bnqedj4f46dwdfmefcc5.jpg"
+          alt="" class="img-fluid">
+        <% } %>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"><%= hauntedLocation.title %></h5>
+          <p class="card-text"><%= hauntedLocation.description %></p>
+          <p class="card-text">
+            <small class="text-muted"><%= hauntedLocation.location %></small>
+          </p>
+          <a href="/hauntedLocations/<%= hauntedLocation._id %>" class="btn btn-purple">View
+            <%= hauntedLocation.title %></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% } %>
+</div>
+
+<script>
+  const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
+  //save without formatting otherwise code breaks here "ctrl+k ctrl+shift+s"
+  const hauntedLocations = { features: <%- JSON.stringify(hauntedLocations) %>}  
+</script>
+
+<script src="/javascripts/clusterMap.js"></script>

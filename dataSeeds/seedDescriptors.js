@@ -1,0 +1,45 @@
+//descriptors will be combined with places to come up with random names for locations
+module.exports.descriptors = [
+  'Creepy',
+  'Scary',
+  'Petrified',
+  'Gloomy',
+  'Terrifying',
+  'Haunted',
+  'Eerie',
+  'Horrifying',
+  'Formidable',
+  'Spine-chilling',
+  'Weird',
+  'Macabre',
+  'Gruesome',
+  'Ghastly',
+  'Startling',
+  'Dire',
+  'Unnerving',
+  'Bone-Chilling'
+]
+
+module.exports.places = [
+  'Hotel',
+  'Cottage',
+  'Farm House',
+  'Cinema House',
+  'Museum',
+  'Inn',
+  'Ghost Town',
+  'Asylum',
+  'Bungalow',
+  'Apartment',
+  'Flat',
+  'Mansion',
+  'Castle',
+  'Motel',
+  'Ship',
+  'Theatre',
+  'Cabin',
+  'Lodge',
+  'Bed & Breakfast',
+  'Chateau',
+  'Boarding House'
+]

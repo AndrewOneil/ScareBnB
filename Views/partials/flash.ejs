@@ -1,0 +1,17 @@
+<!--if success is not empty then it displays-->
+<% if(success && success.length ) {%>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <!--displays flash success variable-->
+  <%= success %>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %>
+
+
+<% if(error && error.length ) {%>
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <!--displays flash error variable-->
+  <%= error %>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %>

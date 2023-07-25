@@ -1,0 +1,45 @@
+<% layout('layouts/boilerplate') %>
+<!-- displays register form, styled using bootstraps form controls -->
+<div class="container display-flex justify-content-center align-items-center mt-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+      <div class="card shadow">
+        <img src="/images/loginImage.avif" alt="" class="card-image-top">
+        <div class="card-body">
+          <h5 class="card-title">Register</h5>
+          <div class="text-muted">
+            <h6>
+              <p>Please Note: Username must be 3 characters or more & Password must be at least 8 characters, contain
+                one
+                uppercase letter, one lowercase letter and one number.</p>
+            </h6>
+          </div>
+          <form action="/register" method="POST" class="validated-form" autocomplete="off">
+            <div class="mb-3">
+              <label class="form-label" for="username">Username</label>
+              <input class="form-control" type="text" id="username" name="username" required autofocus>
+              <div class="valid-feedback">
+                Username Looks good!
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="email">Email Address</label>
+              <input class="form-control" type="email" id="email" name="email" required>
+              <div class="valid-feedback">
+                Email Address Looks good!
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="password">Password</label>
+              <input class="form-control" type="password" id="password" name="password" required>
+              <div class="valid-feedback">
+                Password Looks good!
+              </div>
+            </div>
+            <button class="btn w-100 btn-success">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">ScareBnB</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/hauntedLocations">Haunted Locations</a>
+        <a class="nav-link" href="/hauntedLocations/new">New Location</a>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <!--if there is no current user, display login and register links, else display logout link-->
+        <% if(!currentUser) {%>
+        <a href="/login" class="nav-link">Login</a>
+        <a href="/register" class="nav-link">Register</a>
+        <% } else {%>
+        <a href="/logout" class="nav-link">Logout</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>

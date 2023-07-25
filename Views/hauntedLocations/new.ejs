@@ -1,0 +1,55 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="row">
+  <h1 class="text-center">New Haunted Location</h1>
+  <div class="col-md-6 offset-md-3">
+    <!-- form needs to include novalidate so bootstrap validation can takeover using validated-form class -->
+    <form action="/hauntedLocations" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label" for="title">Title</label>
+        <input class="form-control" type="text" id="title" name="hauntedLocation[title]" required autocomplete="off">
+        <div class="valid-feedback">
+          Title Looks good!
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Location</label>
+        <input class="form-control" type="text" id="location" name="hauntedLocation[location]" required
+          autocomplete="off">
+        <div class="valid-feedback">
+          Location Looks good!
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="price">Location Price</label>
+        <div class="input-group">
+          <span class="input-group-text" id="price-label">£</span>
+          <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price"
+            aria-describedby="price-label" name="hauntedLocation[price]" required autocomplete="off">
+          <div class="valid-feedback">
+            Price Looks good!
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="description">Description</label>
+        <textarea class="form-control" type="text" id="description" name="hauntedLocation[description]" required
+          autocomplete="off"></textarea>
+        <div class="valid-feedback">
+          Description Looks good!
+        </div>
+      </div>
+
+      <div class="mt-3 mb-5">
+        <label for="image" class="form-label">Choose Images</label>
+        <input class="form-control" type="file" id="image" name="image" multiple>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success">Add Haunted Location</button>
+      </div>
+    </form>
+    <a href="/hauntedLocations">All Haunted Locations</a>
+  </div>
+</div>
